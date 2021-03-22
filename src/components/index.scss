@@ -1,0 +1,132 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.visualizer {
+    background: white;
+    color: black;
+    font-size: 16px;
+
+    .title {
+        text-align: center;
+        margin-bottom: 1em;
+
+        a {
+            color: $base-color;
+        }
+    }
+
+    .subtitle {
+        text-align: center;
+        margin-bottom: 3em;
+        font-weight: 500;
+    }
+
+    .form-wrapper {
+        display: flex;
+
+        &>div {
+            width: 50%;
+
+            &:first-of-type {
+                text-align: center;
+            }
+        }
+
+        input[type='file'] {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            text-align: center;
+            border: 1px dashed #888;
+            transition: all .6s;
+            padding: 2.7em 10%;
+            cursor: pointer;
+            color: grey;
+            font-size: .9em;
+    
+            img {
+                width: 5em;
+            }
+    
+            &:hover {
+              transform: scale(1.02);
+              border-color: fade-out(darken($base-color, 10), .5);
+            }
+        }
+
+        textarea {
+            width: 90%;
+            min-height: 60vh;
+        }
+    }
+
+    hr {
+        border: 1px solid #e1e1e1;
+    }
+
+    .button-wrapper {
+        text-align: center;
+        margin-top: 1.5em;
+
+        button {
+            background-color: $base-color;
+            padding: 1em 1.3em;
+            border: 1px solid darken($base-color, 10);
+            border-radius: 3px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+            font-weight: 500;
+          
+            &:hover {
+              background: darken($base-color, 10);
+            }
+        }
+    }
+
+    .visualizer-screen {
+        .instructions {
+            text-align: center;
+
+            .query-sample {
+                font-weight: bold;
+                font-style: italic;
+                text-decoration: underline;
+            }
+        }
+
+        .input-wrapper {
+            padding-bottom: 1em;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 2em;
+
+            input {
+                border: 0.9px solid #888;
+                padding: 0.5em 1em;
+                border-radius: 0.2em;
+                font-size: 1em;
+                color: #333;
+                box-sizing: border-box;
+                width: 100%;
+            
+                &:hover {
+                    border-color: #66afe9;
+                }
+            
+                &:focus {
+                    border-color: #66afe9;
+                    outline: 0;
+                    @include box-shadow(#66afe9);
+                }
+            }
+        }
+
+        .ReactVirtualized__Grid, 
+        .ReactVirtualized__List {
+            outline: none !important;
+        }
+    }
+}
