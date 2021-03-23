@@ -1,6 +1,8 @@
 # json-schema-visualizer
 A JSON Schema Visualizer using React, Redux, Typescript, Webpack and JSONPath.
 
+Optimized to handle very large JSON objects/files.
+
 # Demo
 [https://determined-turing-bd8415.netlify.app/](https://determined-turing-bd8415.netlify.app/)
 
